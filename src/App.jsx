@@ -5,14 +5,9 @@
 
 import React, { useState } from 'react';
 import { GlobalStyle, Conteiner } from './global';
-import { TranslatorProvider, useTranslate } from 'react-translate';
-import * as lang from './languages/translator';
-
-// eslint-disable-next-line react/prop-types
-const Home = function () {
-  const t = useTranslate('Home');
-  return <h1> {t('HELLO')} </h1>;
-};
+import { TranslatorProvider } from 'react-translate';
+import * as lang from './languages';
+import Home from './Components/Home';
 
 function App() {
   const [langage, setLanguage] = useState(lang.languagePt);
