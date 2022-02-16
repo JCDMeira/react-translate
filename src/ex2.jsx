@@ -1,12 +1,12 @@
 /*
-  Exemplo completo em um único arquivo usando a forma mais atual, com o hook
-  useTranslate
+  Exemplo completo em um único arquivo usando a forma mais antiga (legado), com o translate
+
 */
 
 import React, { useState } from 'react';
 import { GlobalStyle, Conteiner } from './global';
-import { TranslatorProvider, useTranslate } from 'react-translate';
-// es-ES
+import { TranslatorProvider, translate } from 'react-translate';
+
 const languageEn = {
   locale: 'en-US',
   Home: {
@@ -20,10 +20,12 @@ const languagePt = {
   },
 };
 
-function Home() {
-  let t = useTranslate('Home');
+// eslint-disable-next-line react/prop-types
+let Home = function ({ t }) {
   return <h1> {t('HELLO')} </h1>;
-}
+};
+
+Home = translate('Home')(Home);
 
 function App() {
   const [langague, setLanguage] = useState('languageEn');
