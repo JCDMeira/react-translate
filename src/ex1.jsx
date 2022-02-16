@@ -1,7 +1,12 @@
+/*
+  Exemplo completo em um único arquivo usando a forma mais atual, com o hook
+  useTranslate
+*/
+
 import React, { useState } from 'react';
 import { GlobalStyle, Conteiner } from './global';
 import { TranslatorProvider, useTranslate } from 'react-translate';
-// es-ES
+
 const languageEn = {
   locale: 'en-US',
   Home: {
