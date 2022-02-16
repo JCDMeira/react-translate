@@ -1,5 +1,5 @@
 const languageEn = {
-  locale: 'en',
+  locale: 'en-US',
   Home: {
     HELLO: 'Hello world!',
   },
@@ -7,8 +7,20 @@ const languageEn = {
 const languagePt = {
   locale: 'pt-BR',
   Home: {
-    HELLO: 'Olá!',
+    HELLO: 'Olá mundo!',
+  },
+};
+const languageEs = {
+  locale: 'es-ES',
+  Home: {
+    HELLO: 'Hola mundo!',
+  },
+};
+const languageCh = {
+  locale: 'pt-BR ',
+  Home: {
+    HELLO: '你好世界!',
   },
 };
 
-export { languageEn, languagePt };
+export { languageEn, languagePt, languageEs, languageCh };

@@ -1,18 +1,20 @@
 /*
-  Exemplo completo em um único arquivo usando a forma mais antiga (legado), com o translate
+  Exemplo completo em um único arquivo usando a forma mais antiga (legado), com o translate.
+  Mas o objeto de idiomas veem de um arquivo externo. Isolado em uma pasta languages
 
 */
 
 import React, { useState } from 'react';
 import { GlobalStyle, Conteiner } from './global';
-import { TranslatorProvider, useTranslate } from 'react-translate';
+import { TranslatorProvider, translate } from 'react-translate';
 import * as lang from './languages/translator';
 
 // eslint-disable-next-line react/prop-types
-const Home = function () {
-  const t = useTranslate('Home');
+let Home = function ({ t }) {
   return <h1> {t('HELLO')} </h1>;
 };
+
+Home = translate('Home')(Home);
 
 function App() {
   const [langage, setLanguage] = useState(lang.languagePt);

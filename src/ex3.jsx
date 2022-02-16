@@ -1,6 +1,6 @@
 /*
-  Exemplo completo em um único arquivo usando a forma mais antiga (legado), com o translate
-
+  Exemplo completo em um único arquivo usando a forma mais nova, com o hook useTranslate
+  O objeto de idiomas vem de forma externa
 */
 
 import React, { useState } from 'react';
