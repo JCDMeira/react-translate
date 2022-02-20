@@ -19,7 +19,7 @@ const languageEs = {
   ...homeEs,
 };
 const languageCh = {
-  locale: 'pt-BR ',
+  locale: 'zh-CH ',
   ...homeCh,
 };
 

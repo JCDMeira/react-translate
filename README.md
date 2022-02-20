@@ -1,13 +1,13 @@
-# Teste com a biblioteca react-translate
+# Teste com a biblioteca i18n
 
-Acesse a documentação em [React-translate](https://www.npmjs.com/package/react-translate)
+Acesse a documentação em [i18n](https://www.npmjs.com/package/i18n)
 
 # 📝 Procedimentos de instalação
 
 Clone este repositório usando o comando:
 
 ```bash
-git clone https://github.com/JCDMeira/react-translate.git
+git clone https://github.com/JCDMeira/i18n-teste-translate.git
 ```
 
 Na pasta do projeto instale as dependências com uso do npm ou yarn
