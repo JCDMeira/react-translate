@@ -17,7 +17,7 @@ let Home = function ({ t }) {
 Home = translate('Home')(Home);
 
 function App() {
-  const [langage, setLanguage] = useState(lang.languagePt);
+  const [language, setLanguage] = useState(lang.languagePt);
 
   const handleChange = ({ target: { value } }) => {
     if (value === 'pt-BR') setLanguage(lang.languagePt);
@@ -30,7 +30,7 @@ function App() {
     <>
       <GlobalStyle />
       <Conteiner>
-        <TranslatorProvider translations={langage}>
+        <TranslatorProvider translations={language}>
           <Home />
         </TranslatorProvider>
         <br />

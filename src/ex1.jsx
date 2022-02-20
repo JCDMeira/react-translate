@@ -6,7 +6,7 @@
 import React, { useState } from 'react';
 import { GlobalStyle, Conteiner } from './global';
 import { TranslatorProvider, useTranslate } from 'react-translate';
-// es-ES
+
 const languageEn = {
   locale: 'en-US',
   Home: {
@@ -21,14 +21,14 @@ const languagePt = {
 };
 
 function Home() {
-  let t = useTranslate('Home');
+  const t = useTranslate('Home');
   return <h1> {t('HELLO')} </h1>;
 }
 
 function App() {
-  const [langague, setLanguage] = useState('languageEn');
+  const [language, setLanguage] = useState('languageEn');
   const handleChange = () => {
-    setLanguage(langague === 'languageEn' ? 'languagePt' : 'languageEn');
+    setLanguage(language === 'languageEn' ? 'languagePt' : 'languageEn');
   };
 
   return (
@@ -36,7 +36,7 @@ function App() {
       <GlobalStyle />
       <Conteiner>
         <TranslatorProvider
-          translations={langague === 'languageEn' ? languagePt : languageEn}
+          translations={language === 'languageEn' ? languagePt : languageEn}
         >
           <Home />
         </TranslatorProvider>
