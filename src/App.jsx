@@ -53,6 +53,13 @@ function App() {
   };
   //------------------------------------------------------
 
+  function multiply(x) {
+    return function (y) {
+      return `${x} * ${y}: ${x * y}`; // 2 * 10: 20
+    };
+  }
+  multiply(2)(10);
+
   return (
     <>
       <GlobalStyle />
